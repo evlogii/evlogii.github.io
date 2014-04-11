@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<link rel="shortcut icon" href="/favicon.ico"/>
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300&amp;subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
 		
 		<!-- Google Analytics -->
 		<script type="text/javascript">
@@ -48,11 +48,9 @@
 			    width: 100%;
 			}
 			.container {
-				width: 500px;
-				height: 335px;
-				position: relative;
+				position: absolute;
 				top: 50%;
-				margin: 167.5px auto 0;
+				left: 50%;
 				font-size: 0;
 			}
 			.container .left {
@@ -71,7 +69,7 @@
 
 	</head>
 	<body>
-	<div class="container">
+	<div class="container" id="liquid">
   		<div class="left">
   			<h2><center>Обо мне</center></h2>
 			<img class="avatar" src="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
@@ -99,6 +97,11 @@
 	</div>
 
 	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogy Sutormin")</script></footer>
+
+	<script type="text/javascript">
+		var element = document.getElementById('liquid');
+		element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
+	</script>
 
 	</body>
 </html>
