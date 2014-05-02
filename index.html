@@ -24,6 +24,9 @@
 			body {
 				background-color: ivory;
 				font-family: 'Roboto Slab', serif;
+				min-height: 500px;
+				margin: 0;
+				padding: 0;
 			}
 			.serviceimage {
 				width: 16px;
@@ -49,6 +52,7 @@
 			}
 			.container {
 				position: absolute;
+				width: 500px;
 				top: 50%;
 				left: 50%;
 				font-size: 0;
@@ -64,6 +68,11 @@
 				width: 200px;
 				vertical-align: top;
 				font-size: 16px;
+			}
+			@media (max-width: 640px) {
+			    .container {
+			    	width: 300px;
+			    }
 			}
 		</style>
 
@@ -101,8 +110,27 @@
 	<script type="text/javascript">
 		window.onload = function () {
 			var element = document.getElementById('liquid');
-			element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
-			//alert("-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px");
+			if (window.innerWidth <= 640) {
+				element.style.margin = "0 0 0 -" + element.offsetWidth/2 + "px";
+				element.style.top = "0";
+				//alert("0 0 0 -" + element.offsetWidth/2 + "px");
+			} else {
+				element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
+				element.style.top = "50%";
+				//alert("-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px");
+			}
+		}
+		window.onresize = function () {
+			var element = document.getElementById('liquid');
+			if (window.innerWidth <= 640) {
+				element.style.margin = "0 0 0 -" + element.offsetWidth/2 + "px";
+				element.style.top = "0";
+				//alert("0 0 0 -" + element.offsetWidth/2 + "px");
+			} else {
+				element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
+				element.style.top = "50%";
+				//alert("-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px");
+			}
 		}
 	</script>
 
