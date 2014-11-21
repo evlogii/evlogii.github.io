@@ -2,11 +2,17 @@
 <html lang="ru">
 	<head>
 		<title>Сайт уиррр</title>
+
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
 		<link rel="shortcut icon" href="/favicon.ico"/>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300&amp;subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
 		
+		<script type="text/javascript" src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+		<script type="application/javascript" src="http://cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+
 		<!-- Google Analytics -->
 		<script type="text/javascript">
 		  var _gaq = _gaq || [];
@@ -18,6 +24,28 @@
 		   	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
+		</script>
+
+		<!-- perform lazy loading and margin central container -->
+		<script type="text/javascript">
+			$(window).load(marginCentralContainer);
+			$(window).resize(marginCentralContainer);
+			$(window).load(function() {
+				$("img.lazy").lazyload();
+			});
+
+			function marginCentralContainer() {
+ 				var container = document.getElementById('liquid');
+ 				var headerHeight = document.getElementById('header').offsetHeight;
+
+				if ((window.innerWidth <= 640) || (window.innerHeight <= container.offsetHeight)) {
+					container.style.margin = "0 0 0 -" + container.offsetWidth/2 + "px";
+					container.style.top = "0";
+				} else {
+					container.style.margin = -(container.offsetHeight + 2*headerHeight)/2 + "px 0 0 -" + container.offsetWidth/2 + "px";
+					container.style.top = "50%";
+				}
+			};
 		</script>
 
 		<style type="text/css">
@@ -39,6 +67,8 @@
 				float:left;
 				margin: 5px;
 				height: 110px;
+				width: 166px;
+
 			}
 			footer {
 			    padding: 0;
@@ -52,11 +82,10 @@
 			}
 			.container {
 				position: absolute;
-				width: 500px;
+				width: 480px;
 				top: 50%;
 				left: 50%;
 				font-size: 0;
-				padding-bottom: 20px;
 			}
 			.container .left {
 				display: inline-block;
@@ -66,13 +95,19 @@
 			}
 			.container .right {
 				display: inline-block;
-				width: 200px;
+				width: 180px;
 				vertical-align: top;
 				font-size: 16px;
+			}
+			@media (max-height: 500px) {
+			    footer{
+			    	visibility: hidden;
+			    }
 			}
 			@media (max-width: 640px) {
 			    .container {
 			    	width: 300px;
+			    	padding-bottom: 20px;
 			    }
 			}
 		</style>
@@ -81,59 +116,30 @@
 	<body>
 	<div class="container" id="liquid">
   		<div class="left">
-  			<h2><center>Обо мне</center></h2>
-			<img class="avatar" src="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
+  			<h2><center id="header">Обо мне</center></h2>
+			<img class="avatar lazy" data-original="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
 			<p>Здесь должна быть информация обо мне, но я пока не представляю себе, что сюда писать, так что вы читаете то, что читаете. Типа агностик, гик, мизантроп, временами геймер, яблофил и книгоман. Короче, в итоге я, конечно, напишу сюда что-нибудь более конкретное, но пока что есть, то есть. Наслаждайтесь.</p>
 		</div>
  		<div class="right">
  			<h2><center>Где я</center></h2>
-			<ul style="list-style-type:square;">
-				<li><a target="_blank" href="mailto:me@evlogii.com"><img class="serviceimage img-rounded" src="http://g.etfv.co/https://mail.google.com">почта</a></li>
-				<li><a target="_blank" href="https://twitter.com/evlogii"><img class="serviceimage img-rounded" src="http://si0.twimg.com/favicons/favicon.ico">твиттер</a></li>
-				<li><a target="_blank" href="http://blog.evlogii.com"><img class="serviceimage img-rounded" src="http://assets.tumblr.com/images/favicon.gif">мой блог</a></li>
-				<li><a target="_blank" href="http://www.youtube.com/evlogii"><img class="serviceimage img-rounded" src="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico">ютуб</a></li>
-				<li><a target="_blank" href="https://github.com/evlogii"><img class="serviceimage img-rounded" src="https://github.com/favicon.ico">гитхаб</a>/<a href="https://gist.github.com/evlogii">гист</a></li>
-				<li><a target="_blank" href="skype:mr_evlogii"><img class="serviceimage img-rounded" src="http://www.skypeassets.com/i/images/icons/favicon.ico">скайп</a></li>
-				<li><a target="_blank" href="http://steamcommunity.com/id/evlogii"><img class="serviceimage img-rounded" src="http://g.etfv.co/https://store.steampowered.com">стим</a></li>
-				<li><a target="_blank" href="https://vk.com/evlogii"><img class="serviceimage img-rounded img-circle" src="http://vk.com/images/favicon_vk.ico">вконтакте</a></li>
-				<li><a target="_blank" href="https://www.facebook.com/evlogii"><img class="serviceimage img-rounded" src="https://fbstatic-a.akamaihd.net/rsrc.php/yi/r/q9U99v3_saj.ico">фейсбук</a></li>
-				<li><a target="_blank" href="http://stackoverflow.com/users/2097076"><img class="serviceimage img-rounded" src="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">стэковерфлоу</a></li>
-				<li><a target="_blank" href="http://instagram.com/evlogii"><img class="serviceimage img-rounded" src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/e2bd44a/images/ico/favicon.ico">инстаграм</a></li>
-				<li><a target="_blank" href="https://foursquare.com/evlogii"><img class="serviceimage img-rounded" src="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_36x36.png">форсквер</a></li>
-				<li><a target="_blank" href="http://www.imdb.com/user/ur34638580/"><img class="serviceimage img-rounded" src="http://g.etfv.co/http://www.imdb.com">ай-эм-ди-би</a></li>
-				<li><a target="_blank" href="https://last.fm/user/evlogii"><img class="serviceimage img-rounded" src="http://cdn.last.fm/flatness/favicon.ico">ласт.фм</a></li>
+			<ul style="list-style-type: none;">
+				<li><a target="_blank" href="mailto:me@evlogii.com"><img class="serviceimage lazy" data-original="http://g.etfv.co/https://mail.google.com">почта</a></li>
+				<li><a target="_blank" href="https://twitter.com/evlogii"><img class="serviceimage lazy" data-original="http://si0.twimg.com/favicons/favicon.ico">твиттер</a></li>
+				<li><a target="_blank" href="http://blog.evlogii.com"><img class="serviceimage lazy" data-original="http://assets.tumblr.com/images/favicon.gif">мой блог</a></li>
+				<li><a target="_blank" href="http://www.youtube.com/evlogii"><img class="serviceimage lazy" data-original="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico">ютуб</a></li>
+				<li><a target="_blank" href="https://github.com/evlogii"><img class="serviceimage lazy" data-original="https://github.com/favicon.ico">гитхаб</a>/<a href="https://gist.github.com/evlogii">гист</a></li>
+				<li><a target="_blank" href="skype:mr_evlogii"><img class="serviceimage lazy" data-original="http://www.skypeassets.com/i/images/icons/favicon.ico">скайп</a></li>
+				<li><a target="_blank" href="http://steamcommunity.com/id/evlogii"><img class="serviceimage lazy" data-original="http://g.etfv.co/https://store.steampowered.com">стим</a></li>
+				<li><a target="_blank" href="https://vk.com/evlogii"><img class="serviceimage img-circle lazy" data-original="http://vk.com/images/favicon_vk.ico">вконтакте</a></li>
+				<li><a target="_blank" href="https://www.facebook.com/evlogii"><img class="serviceimage lazy" data-original="https://fbstatic-a.akamaihd.net/rsrc.php/yi/r/q9U99v3_saj.ico">фейсбук</a></li>
+				<li><a target="_blank" href="http://stackoverflow.com/users/2097076"><img class="serviceimage lazy" data-original="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">стэковерфлоу</a></li>
+				<li><a target="_blank" href="http://instagram.com/evlogii"><img class="serviceimage lazy" data-original="http://d36xtkk24g8jdx.cloudfront.net/bluebar/e2bd44a/images/ico/favicon.ico">инстаграм</a></li>
+				<li><a target="_blank" href="https://foursquare.com/evlogii"><img class="serviceimage lazy" data-original="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_36x36.png">форсквер</a></li>
+				<li><a target="_blank" href="http://www.imdb.com/user/ur34638580/"><img class="serviceimage lazy" data-original="http://g.etfv.co/http://www.imdb.com">ай-эм-ди-би</a></li>
+				<li><a target="_blank" href="https://last.fm/user/evlogii"><img class="serviceimage lazy" data-original="http://cdn.last.fm/flatness/favicon.ico">ласт.фм</a></li>
 			</ul>
 		</div>
 	</div>
-
-	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogy Sutormin")</script></footer>
-
-	<script type="text/javascript">
-		window.onload = function () {
-			var element = document.getElementById('liquid');
-			if (window.innerWidth <= 640) {
-				element.style.margin = "0 0 0 -" + element.offsetWidth/2 + "px";
-				element.style.top = "0";
-				//alert("0 0 0 -" + element.offsetWidth/2 + "px");
-			} else {
-				element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
-				element.style.top = "50%";
-				//alert("-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px");
-			}
-		}
-		window.onresize = function () {
-			var element = document.getElementById('liquid');
-			if (window.innerWidth <= 640) {
-				element.style.margin = "0 0 0 -" + element.offsetWidth/2 + "px";
-				element.style.top = "0";
-				//alert("0 0 0 -" + element.offsetWidth/2 + "px");
-			} else {
-				element.style.margin = "-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px";
-				element.style.top = "50%";
-				//alert("-" + element.offsetHeight/2 + "px 0 0 -" + element.offsetWidth/2 + "px");
-			}
-		}
-	</script>
-
+	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogiy Sutormin")</script></footer>
 	</body>
 </html>
