@@ -8,16 +8,16 @@
 		<link rel="shortcut icon" href="/favicon.ico"/>
 	</head>
 	<body>
-	<div class="container" id="container">
+	<div id="container">
   		<div id="left">
-  			<h2><center>Обо мне</center></h2>
+  			<h2>Обо мне</h2>
 			<img class="avatar lazy" data-original="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
 			<p>Здесь должна быть информация обо мне, но я пока не представляю себе, что сюда писать, так что вы читаете то, что читаете. Типа агностик, гик, мизантроп, временами геймер, яблофил и книгоман. Короче, в итоге я, конечно, напишу сюда что-нибудь более конкретное, но пока что есть, то есть. Наслаждайтесь.</p>
 		</div>
  		<div id="right">
- 			<h2><center>Где я</center></h2>
+ 			<h2>Где я</h2>
 			<ul style="list-style-type: none;">
-				<li><a target="_blank" href="mailto:me@evlogii.com"><img class="serviceimage lazy" data-original="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/16/Communication-gmail-icon.png">почта</a></li>
+				<li><a target="_blank" href="mailto:me@evlogii.com"><img src="" alt="почта" class="serviceimage lazy" data-original="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/16/Communication-gmail-icon.png">почта</a></li>
 				<li><a target="_blank" href="https://twitter.com/evlogii"><img class="serviceimage lazy" data-original="http://si0.twimg.com/favicons/favicon.ico">твиттер</a></li>
 				<li><a target="_blank" href="https://medium.com/@evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://medium.com/">медиум</a></li>
 				<li><a target="_blank" href="http://instagram.com/evlogii"><img class="serviceimage lazy" data-original="http://d36xtkk24g8jdx.cloudfront.net/bluebar/e2bd44a/images/ico/favicon.ico">инстаграм</a></li>
@@ -71,13 +71,16 @@
 				margin-left: -240px;
 				margin-top: -208px;
 			}
-			.container #left {
+			#container #left {
 				width: 300px;
 				float: left;
 			}
-			.container #right {
+			#container #right {
 				width: 180px;
 				float: left;
+			}
+			#container h2 {
+				text-align: center;
 			}
 			@media (max-width: 640px) {
 			    #container {
