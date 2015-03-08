@@ -2,13 +2,41 @@
 <html lang="ru">
 	<head>
 		<title>Сайт уиррр</title>
-
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
 		<link rel="shortcut icon" href="/favicon.ico"/>
-
-		<style type="text/css">
+	</head>
+	<body>
+	<div id="container">
+  		<div id="left">
+  			<h2>Обо мне</h2>
+			<img class="avatar lazy" data-original="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
+			<p>Здесь должна быть информация обо мне, но я пока не представляю себе, что сюда писать, так что вы читаете то, что читаете. Типа агностик, гик, мизантроп, временами геймер, яблофил и книгоман. Короче, в итоге я, конечно, напишу сюда что-нибудь более конкретное, но пока что есть, то есть. Наслаждайтесь.</p>
+		</div>
+ 		<div id="right">
+ 			<h2>Где я</h2>
+			<ul style="list-style-type: none;">
+				<li><a target="_blank" href="mailto:me@evlogii.com"><img src="" alt="почта" class="serviceimage lazy" data-original="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/16/Communication-gmail-icon.png">почта</a></li>
+				<li><a target="_blank" href="https://twitter.com/evlogii"><img class="serviceimage lazy" data-original="http://si0.twimg.com/favicons/favicon.ico">твиттер</a></li>
+				<li><a target="_blank" href="https://medium.com/@evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://medium.com/">медиум</a></li>
+				<li><a target="_blank" href="http://instagram.com/evlogii"><img class="serviceimage lazy" data-original="http://d36xtkk24g8jdx.cloudfront.net/bluebar/e2bd44a/images/ico/favicon.ico">инстаграм</a></li>
+				<li><a target="_blank" href="http://www.youtube.com/evlogii"><img class="serviceimage lazy" data-original="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico">ютуб</a></li>
+				<li><a target="_blank" href="https://github.com/evlogii"><img class="serviceimage lazy" data-original="https://github.com/favicon.ico">гитхаб</a>/<a href="https://gist.github.com/evlogii">гист</a></li>
+				<li><a target="_blank" href="skype:mr_evlogii"><img class="serviceimage lazy" data-original="http://www.skypeassets.com/i/images/icons/favicon.ico">скайп</a></li>
+				<li><a target="_blank" href="http://steamcommunity.com/id/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://store.steampowered.com">стим</a></li>
+				<li><a target="_blank" href="https://vk.com/evlogii"><img class="serviceimage img-circle lazy" data-original="http://vk.com/images/favicon_vk.ico">вконтакте</a></li>
+				<li><a target="_blank" href="https://www.facebook.com/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://www.facebook.com">фейсбук</a></li>
+				<li><a target="_blank" href="http://stackoverflow.com/users/2097076"><img class="serviceimage lazy" data-original="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">стэковерфлоу</a></li>
+				<li><a target="_blank" href="https://foursquare.com/evlogii"><img class="serviceimage lazy" data-original="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_36x36.png">форсквер</a></li>
+				<li><a target="_blank" href="http://www.imdb.com/user/ur34638580/"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=http://www.imdb.com">ай-эм-ди-би</a></li>
+				<li><a target="_blank" href="https://www.goodreads.com/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://www.goodreads.com">гудридс</a></li>
+				<li><a target="_blank" href="https://last.fm/user/evlogii"><img class="serviceimage lazy" data-original="http://cdn.last.fm/flatness/favicon.ico">ласт фм</a></li>
+			</ul>
+		</div>
+	</div>
+	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogiy Sutormin")</script></footer>
+		<style>
 			body {
 				background-color: ivory;
 				font-family: 'PT Sans', sans-serif;
@@ -36,108 +64,51 @@
 			    left: 0px;
 			    width: 100%;
 			}
-			.container {
+			#container {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				float: left;
-  				clear: none; 
+				margin-left: -240px;
+				margin-top: -208px;
 			}
-			.container .left {
-				display: inline-block;
+			#container #left {
 				width: 300px;
-				vertical-align: top;
+				float: left;
 			}
-			.container .right {
-				display: inline-block;
+			#container #right {
 				width: 180px;
-				vertical-align: top;
+				float: left;
+			}
+			#container h2 {
+				text-align: center;
 			}
 			@media (max-width: 640px) {
-			    .container {
+			    #container {
 			    	width: 300px;
+			    	margin-top: 0;
+			    	top: 0;
 			    	padding-bottom: 20px;
+			    	margin-left: -150px;
 			    }
-			    .container .right {
+			    #container #right {
 					width: 300px;
 				}
-
 			}
 		</style>
-
-	</head>
-	<body>
-	<div class="container" id="container">
-  		<div class="left" id="left">
-  			<h2><center id="header">Обо мне</center></h2>
-			<img class="avatar lazy" data-original="http://cs409628.vk.me/v409628982/55f9/vaFsGx1YUGg.jpg">
-			<p>Здесь должна быть информация обо мне, но я пока не представляю себе, что сюда писать, так что вы читаете то, что читаете. Типа агностик, гик, мизантроп, временами геймер, яблофил и книгоман. Короче, в итоге я, конечно, напишу сюда что-нибудь более конкретное, но пока что есть, то есть. Наслаждайтесь.</p>
-		</div>
- 		<div class="right" id="right">
- 			<h2><center>Где я</center></h2>
-			<ul style="list-style-type: none;">
-				<li><a target="_blank" href="mailto:me@evlogii.com"><img class="serviceimage lazy" data-original="http://icons.iconarchive.com/icons/cornmanthe3rd/plex/16/Communication-gmail-icon.png">почта</a></li>
-				<li><a target="_blank" href="https://twitter.com/evlogii"><img class="serviceimage lazy" data-original="http://si0.twimg.com/favicons/favicon.ico">твиттер</a></li>
-				<li><a target="_blank" href="https://medium.com/@evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://medium.com/">медиум</a></li>
-				<li><a target="_blank" href="http://instagram.com/evlogii"><img class="serviceimage lazy" data-original="http://d36xtkk24g8jdx.cloudfront.net/bluebar/e2bd44a/images/ico/favicon.ico">инстаграм</a></li>
-				<li><a target="_blank" href="http://www.youtube.com/evlogii"><img class="serviceimage lazy" data-original="http://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico">ютуб</a></li>
-				<li><a target="_blank" href="https://github.com/evlogii"><img class="serviceimage lazy" data-original="https://github.com/favicon.ico">гитхаб</a>/<a href="https://gist.github.com/evlogii">гист</a></li>
-				<li><a target="_blank" href="skype:mr_evlogii"><img class="serviceimage lazy" data-original="http://www.skypeassets.com/i/images/icons/favicon.ico">скайп</a></li>
-				<li><a target="_blank" href="http://steamcommunity.com/id/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://store.steampowered.com">стим</a></li>
-				<li><a target="_blank" href="https://vk.com/evlogii"><img class="serviceimage img-circle lazy" data-original="http://vk.com/images/favicon_vk.ico">вконтакте</a></li>
-				<li><a target="_blank" href="https://www.facebook.com/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://www.facebook.com">фейсбук</a></li>
-				<li><a target="_blank" href="http://stackoverflow.com/users/2097076"><img class="serviceimage lazy" data-original="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">стэковерфлоу</a></li>
-				<li><a target="_blank" href="https://foursquare.com/evlogii"><img class="serviceimage lazy" data-original="https://playfoursquare.s3.amazonaws.com/press/logo/poweredByFoursquare_36x36.png">форсквер</a></li>
-				<li><a target="_blank" href="http://www.imdb.com/user/ur34638580/"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=http://www.imdb.com">ай-эм-ди-би</a></li>
-				<li><a target="_blank" href="https://www.goodreads.com/evlogii"><img class="serviceimage lazy" data-original="http://www.google.com/s2/favicons?domain=https://www.goodreads.com">гудридс</a></li>
-				<li><a target="_blank" href="https://last.fm/user/evlogii"><img class="serviceimage lazy" data-original="http://cdn.last.fm/flatness/favicon.ico">ласт фм</a></li>
-			</ul>
-		</div>
-	</div>
-	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogiy Sutormin")</script></footer>
-
 		<script type="text/javascript" src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
 		<script type="application/javascript" src="http://cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
-
 		<!-- perform lazy loading and margin central container -->
-		<script type="text/javascript">
-			$(window).load(marginCentralContainer);
-			$(window).resize(marginCentralContainer);
+		<script>
 			$(window).load(function() {
 				$("img.lazy").lazyload();
 			});
-
-			function marginCentralContainer() {
- 				var container = document.getElementById('container');
-
- 				var leftHeight = document.getElementById('left').offsetHeight;
- 				var leftWidth = document.getElementById('left').offsetWidth;
- 				var rightHeight = document.getElementById('right').offsetHeight;
- 				var rightWidth = document.getElementById('right').offsetWidth;
-
- 				var containerHeight = leftHeight > rightHeight ? leftHeight : rightHeight;
-
- 				var headerHeight = document.getElementById('header').offsetHeight;
-
-				if ((window.innerWidth <= 640) || (window.innerHeight <= containerHeight)) {
-					var containerWidth = container.offsetWidth;
-					container.style.margin = "0 0 0 -" + containerWidth/2 + "px";
-					container.style.top = "0";
-				} else {
-					var containerWidth = leftWidth + rightWidth;
-					container.style.margin = -(containerHeight + 2*headerHeight)/2 + "px 0 0 -" + containerWidth/2 + "px";
-					container.style.top = "50%";
-				}
-			};
 		</script>
-
 		<!-- Google Analytics -->
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
 		  ga('create', 'UA-38319477-2', 'auto');
 		  ga('send', 'pageview');
 		</script>
