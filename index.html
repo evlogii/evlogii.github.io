@@ -4,7 +4,6 @@
 		<title>Сайт уиррр</title>
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-
 		<link rel="shortcut icon" href="/favicon.ico"/>
 	</head>
 	<body>
@@ -37,23 +36,6 @@
 	</div>
 	<footer><script>document.write("&copy " + new Date().getFullYear() + " Evlogiy Sutormin")</script></footer>
 	</body>
-	<script type="text/javascript" src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
-	<script type="application/javascript" src="http://cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
-	<!-- perform lazy loading and margin central container -->
-	<script>
-		$(window).load(function() {
-			$("img.lazy").lazyload();
-		});
-	</script>
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-38319477-2', 'auto');
-	  ga('send', 'pageview');
-	</script>
 	<style>
 		body {
 			background-color: ivory;
@@ -87,7 +69,7 @@
 			top: 50%;
 			left: 50%;
 			margin-left: -240px;
-			margin-top: -208px;
+			margin-top: -194px;
 		}
 		#container #left {
 			width: 300px;
@@ -115,5 +97,24 @@
 				margin: 15px;
 			}
 		}
-	</style>	
+	</style>
+	<script type="text/javascript" src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+	<script type="application/javascript" src="http://cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+	<!-- perform lazy loading and margin central container -->
+	<script>
+		$(document).ready(function() {
+			$("img.lazy").lazyload();
+			var marginTop = Math.max($("#left").height(), $("#right").height());
+			$("#container").css('margin-top', '-'+marginTop/2+'px');
+		});
+	</script>
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-38319477-2', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </html>
