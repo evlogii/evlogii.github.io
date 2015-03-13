@@ -105,7 +105,7 @@
 		$(document).ready(function() {
 			$("img.lazy").lazyload();
 			var marginTop = Math.max($("#left").height(), $("#right").height());
-			$("#container").css('margin-top', '-'+marginTop/2+'px');
+			console.log("margin-top for #container should be set to -" + marginTop/2 + "px");
 		});
 	</script>
 	<!-- Google Analytics -->
